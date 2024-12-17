@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lights Out</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>5x5 Lights Out</h1>
+    <button class="new-game">New Game</button>
+    <div class="game-board"></div>
+    <div class="stats">
+      <p>Target: <span id="target">8</span></p>
+      <p>Moves: <span id="moves">0</span></p>
+      <p>Time: <span id="time">0:00</span></p>
+    </div>
+  </div>
+  
+  <footer>
+    <section class="addendum">
+      <h3>Addendum</h3>
+      <p><strong>Problem Solved:</strong> Fixed recursion issues in the light toggling logic and added proper timer reset functionality when starting a new game.</p>
+      <p><strong>How I Solved It:</strong>  
+        - Implemented a non-recursive light toggle function to avoid stack overflow issues.<br>
+        - Ensured that the timer resets cleanly when a new game starts.<br>
+        - Added clearer randomization logic to initialize the game board.</p>
+      <p><strong>Challenges Faced:</strong> Managing clean board state initialization while ensuring accurate move tracking was tricky. This was resolved by separating board generation logic from the toggling mechanics.</p>
+    </section>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  
+  <script src="script.js"></script>
+  <script>
+    // Dynamically display the last modified date
+    document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+  </script>
+</body>
+</html>
